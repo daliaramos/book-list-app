@@ -1,7 +1,14 @@
-import react from "react";
-import books from "./components/booksData";
+import books from "./booksData";
+import BookDetails from "./BookDetails";
+
 const Booklist = () => {
-  return <></>;
+  return (
+    <>
+      {books.map((book) => (
+        <BookDetails key={book.key} book={book}></BookDetails>
+      ))}
+    </>
+  );
 };
 
-export default BookList;
+export default Booklist;
